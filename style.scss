@@ -2,18 +2,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
   }
   
   .container {
     width: 1300px;
   }
-  .red_button{
+  .button{
     background-color: #EC1B2E;
     color: #fff;
     font-family: 'Circe';
+    cursor: pointer;
+    &:hover {
+      background-color: #ab2a35;
+  }
   }
   
-  .header_upper {
+  .header-upper {
         border-bottom: 1px solid #7e7e7e;
         align-items: center;
         display: flex;
@@ -22,111 +27,120 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
 
-        &_links{
+        &__links{
           padding: 0px;
           margin: 0px;
           display: flex;
           flex-direction: row;
           align-items: flex-start;
           width: 680px;
-          height: 24px;
+          
           list-style: none;
         }
-        &_elem{
+        &__elem{
           display: flex;
           flex-direction: row;
           margin-right: 45px;
         }
-        &_icon{
+        &__icon{
           width: 24px;
           height: 24px;
           margin-right: 20px;
         }
-        &_link{
+        &__link{
           list-style: none;
           font-family: 'Circe';
           line-height: 140%;
           font-size: 14px;
+          
         }
-        &_button{
+        &__button{
           font-weight: 700;
           padding-top: 10px;
           padding-bottom: 10px;
           padding-right: 20px;
           padding-left: 20px;
         }
+        &__name{
+          width: 217px;
+          font-family: 'Circe';
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 140%;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          color: #EC1B2E;
+        }
 
   } 
 
-  .upper_name{
-    width: 217px;
-    font-family: 'Circe';
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #EC1B2E;
-  }
-  .header_lower {
+  .header-lower {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;
-    &_logo{
+
+    &__logo{
       height: 60px;
       width: 60px;
     }
-    &_container{
+    &__menu{
       align-items: center;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
-    &_link{
+    &__link{
+      margin-left: 20px;
+      list-style: none;
+      text-decoration: none;
       color: #333;
-      margin-right: 20px;
       font-family: 'Circe Bold';
       font-size: 14px;
       text-transform: uppercase;
     }
   }
   .slider{
-    width: 1920px;
-    height: 700px;
-    background-image: url("back.png");
+    width: 100%;
     background-position: center;
-    object-fit: contain;
+    background-size: cover;
+    padding-top: 130px;
+    padding-bottom: 150px;
     display: flex;
     flex-direction: column;
-    &_container{
-      max-width: 590px;
-      margin-bottom: 150px;
-      margin-top: 130px;
-      margin-left: 420px;
+    align-items: center;
+    background-image: url("back.png");
+
+    &__container{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
     }
-    &_text_container{
-      background-color: #33333387;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-right: 30px;
-      padding-left: 30px;
-      margin-bottom: 50px;
-    }
-    &_text{
-      margin-right: 15%;
-      text-align: start;
-      font-family: 'Circe';
-      font-weight: 800;
-      font-size: 40px;
-      line-height: 140%;
-      color: #fff;
+    h1{
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 140%;
+    font-family: 'Circe ExtraBold';
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 100px;
+    background-color: rgba($color: #333, $alpha: 0.5);
+    width: 540px;
     }
 
   }
-  .slider_button{
+  .slider__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 25%;
+  }
+  .slider__button{
       padding-top: 15px;
       padding-bottom: 15px;
       padding-right: 30px;
@@ -135,4 +149,5 @@ body {
       font-size: 20px;
       line-height: 140%;
       max-width: 110px;
+      
   }
